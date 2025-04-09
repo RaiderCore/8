@@ -1,0 +1,35 @@
+﻿<Window x:Class="TasksApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Tasks App" Height="450" Width="800">
+    <Grid>
+        <!-- Комбо-бокс для выбора задачи -->
+        <ComboBox x:Name="TaskComboBox" 
+                  HorizontalAlignment="Left" 
+                  VerticalAlignment="Top" 
+                  Width="200" 
+                  Margin="10" 
+                  SelectionChanged="TaskComboBox_SelectionChanged"
+                  FontSize="14"/>
+
+        <!-- Кнопка для выполнения задачи -->
+        <Button x:Name="ExecuteButton" 
+                Content="Execute" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Margin="220,10,0,0" 
+                Width="100" 
+                Click="ExecuteButton_Click"
+                FontSize="14"/>
+
+        <!-- Текстовое поле для отображения результата -->
+        <TextBox x:Name="ResultTextBox" 
+                 HorizontalAlignment="Stretch" 
+                 VerticalAlignment="Stretch" 
+                 Margin="10,50,10,10" 
+                 IsReadOnly="True" 
+                 TextWrapping="Wrap"
+                 FontSize="14"
+                 VerticalScrollBarVisibility="Auto"/>
+    </Grid>
+</Window>
